@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="body">
+    <ul id="ul">
+        <li id="item-1">biriyani</li>
+        <li id="item-2">polao</li>
+        <li id="item-3">salad</li>
+        <li id="item-4">borhani</li>
+        <li id="item-5">vagetable</li>
+    </ul>
+
+    <script>
+        document.getElementById('item-1').addEventListener('click',function(event){
+            console.log('item-1 clicker')
+            event.stopPropagation()
+        })
+        document.getElementById('ul').addEventListener('click',function(){
+            console.log('ul clicked')
+        })
+        document.getElementById('body').addEventListener('click',function(){
+            console.log('body clicked')
+        })
+
+        document.getElementById('item-2').addEventListener('click',function(event2){
+            console.log('item-2 clicked')
+            event2.stopImmediatePropagation();
+        })
+        document.getElementById('item-2').addEventListener('click',function(){
+            console.log('item-2 clicked')
+        })
+        document.getElementById('item-2').addEventListener('click',function(){
+            console.log('item-2 clicked')
+            // event2.stopPropagation()
+            
+        })
+    </script>
+</body>
+</html>
