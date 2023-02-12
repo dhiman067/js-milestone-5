@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bap-Er-Bank</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body>
+    <h1 class="text-4xl text-center mt-10">Let's get some <span class="text-6xl">Moooooooney!!!</span></h1>
+    <section class="grid grid-cols-3 gap-4 w-9/12 mx-auto mt-10 text-white text-3xl">
+        <div class=" bg-green-400 p-10 rounded">
+            <h1>Deposit</h1>
+            <p>$<span id="previous-deposit">00</span></p>
+        </div>
+        <div class=" bg-pink-400 p-10 rounded">
+            <h1>Withdraw</h1>
+            <p>$00</p>
+        </div>
+        <div class=" bg-fuchsia-400	p-10 rounded">
+            <h1>Balance</h1>
+            <p>$<span id="current-balance">1235</span></p>
+        </div>
+    </section>
+
+    <section class="grid grid-cols-2 gap-4 w-9/12 mx-auto mt-10  ">
+        <div class="bg-cyan-300	p-20 rounded ">
+            <h1 class="text-white text-3xl pb-4">Please Deposit</h1>
+            <input id="amount-to-deposit" class="block w-11/12" type="text" placeholder="$ amount you want to deposit">
+            <button id="deposit-btn" class="text-white bg-violet-800 text-white px-7 py-2 rounded mt-5 hover:bg-pink-400">Deposit</button>
+        </div>
+        <div class="bg-violet-400	p-20 rounded">
+            <h1 class="text-white text-3xl pb-4">Please Withdraw</h1>
+            <input class="block w-11/12" type="text" placeholder="$ amount you want to withdraw">
+            <button class="text-white bg-violet-800 text-white px-7 py-2 rounded mt-5 hover:bg-pink-400">Withdraw</button>
+        </div>
+    </section>
+
+    <script src="js/money-transction.js"></script>
+</body>
+</html>
