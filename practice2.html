@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document2</title>
+</head>
+
+<body>
+    <h1 style="justify-content: center; align-items: center; display: flex;">Product Price</h1>
+
+    <div style="text-align: center;">
+        <h3>price =<span id="original-price">1000</span></h3>
+        <p style="display: inline-block;">cupon</p>
+        <input id="coupon-field" type="text" placeholder="coupon code">
+        <button id="apply-btn">apply</button>
+        <p>please pay: <span id="have-to-pay">00</span></p>
+    </div>
+
+
+    <script>
+        document.getElementById('apply-btn').addEventListener('click', function () {
+            const originalPrice = document.getElementById('original-price');
+            const originalPriceString = originalPrice.innerText;
+            const getOriginalPrice = parseFloat(originalPriceString);
+
+            const couponField = document.getElementById('coupon-field');
+            const couponFieldString = couponField.value;
+            couponField.value = '';
+
+
+            const haveToPay = document.getElementById('have-to-pay');
+            const haveToPayString = haveToPay.innerText;
+
+
+            if (couponFieldString === 'DISC30') {
+                const disCountTotal = getOriginalPrice - ((getOriginalPrice * 30) / 100);
+                haveToPay.innerText = disCountTotal;
+
+            }
+
+            else if (couponFieldString === '') {
+                haveToPay.innerText = getOriginalPrice;
+            }
+
+            else {
+                alert('wrong coupon');
+                haveToPay.innerText = getOriginalPrice;
+            }
+        })
+    </script>
+
+</body>
+
+</html>

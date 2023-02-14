@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 style="justify-content: center; align-items: center; display: flex;">Product Price</h1>
+
+    <div style="text-align: center;">
+        <h3>price =<span id="original-price">1000</span></h3>
+        <button id="apply-btn">apply 30%</button>
+        <p>please pay: <span id="have-to-pay">00</span></p>
+    </div>
+
+    <script>
+        document.getElementById('apply-btn').addEventListener('click', function () {
+            const originalPrice = document.getElementById('original-price');
+            const originalPriceString = originalPrice.innerText;
+            const getOriginalPrice = parseFloat(originalPriceString);
+            const disCountTotal = getOriginalPrice-((getOriginalPrice * 30) / 100);
+            const haveToPay = document.getElementById('have-to-pay');
+            const haveToPayString = haveToPay.innerText;
+            
+            haveToPay.innerText =  disCountTotal
+
+            
+
+        })
+    </script>
+</body>
+
+</html>
