@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body>
+    <h1 class="text-5xl font-medium justify-center align-center flex mt-10 text-green-600	">Money Master</h1>
+
+    <section class="mx-10 lg:mx-96 bg-slate-100 mt-10">
+        <div class=" text-center ">
+            <h1 class="text-2xl font-medium pt-5 pb-5">Income</h1>
+            <p class="inline-block">income: </p>
+            <input id="income-field" class="bg-slate-200 rounded" type="text">
+
+            <h1 class="text-2xl font-medium pt-5 pb-5">Expenses</h1>
+            <p class="inline-block">food: </p>
+            <input id="food-field" class="mb-5 ml-6 h-auto bg-slate-200	rounded	
+            " type="text">
+            <br>
+            <p class="inline-block">rent: </p>
+            <input id="rent-field" class="mb-5 ml-7 bg-slate-200 rounded" type="text">
+            <br>
+            <p class="inline-block">clothes: </p>
+            <input id="clothes-field" class="mb-5 ml-2 bg-slate-200 rounded" type="text">
+            <br>
+            <button id="calculate-btn" class="w-40 hover hover:bg-slate-700 py-3 rounded text-white bg-blue-700 mt-5 mb-5">calculate</button>
+
+            <h1 class="text-2xl font-medium mb-5">Total Expenses: <span id="total-expanse">00</span>
+            </h1>
+
+            <h1 class="text-2xl font-medium mb-5">Balance: <span id="balance">00</span></h1>
+
+            <p class="inline-block">Save: </p>
+            <input id="save-amount" class="w-24 mb-5 ml-2 inline-block bg-slate-200 rounded" type="text">
+            <p class="inline-block mx-5 ">%</p>
+            <button id="save-btn" class="w-40 hover hover:bg-slate-700 py-3 rounded text-white bg-blue-700 mb-10">save</button>
+
+            <h1 class="mb-5 text-2xl font-medium ">Saving Amount: <span id="saving-amount-value"> 00</span> </h1>
+            <h1 class="text-2xl font-medium pb-10">Remaining Balance: <span id="remaining-balance"> 00</span> </h1>
+    </section>
+
+<script src="scripts/calculate.js"></script>
+    </div>
+</body>
+
+</html>
